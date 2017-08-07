@@ -1,4 +1,6 @@
 ﻿
+using EssentialsPro.Commands;
+
 using MiNET;
 using MiNET.Plugins;
 using MiNET.Plugins.Attributes;
@@ -22,12 +24,17 @@ namespace EssentialsPro
     {
         protected override void OnEnable()
         {
-
+            RegisterCommands();
         }
 
         public override void OnDisable()
         {
 
+        }
+
+        private void RegisterCommands()
+        {
+            Context.PluginManager.LoadCommands(new Clear(this));
         }
     }
 }

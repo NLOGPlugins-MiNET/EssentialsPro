@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Clear.cs" />
     <Compile Include="EssentialsPro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
