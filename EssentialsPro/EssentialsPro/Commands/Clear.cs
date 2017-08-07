@@ -20,7 +20,7 @@ namespace EssentialsPro.Commands
 {
     public class Clear
     {
-        public EssentialsPro Plugin { get; set; }
+        private EssentialsPro Plugin { get; set; }
 
         public Clear(EssentialsPro plugin)
         {

@@ -19,31 +19,18 @@ using MiNET.Plugins.Attributes;
 
 namespace EssentialsPro
 {
-    [Plugin(PluginName = "EssentialsPro", Description = "Preparing...", PluginVersion = "1.0", Author = "PIEA")]
-    public class EssentialsPro : Plugin
+    public class EPMessages
     {
-        private EPMessages Message { get; set; }
+        private EssentialsPro Plugin { get; set; }
 
-        protected override void OnEnable()
+        public EPMessages(EssentialsPro plugin)
         {
-            Message = new EPMessages(this);
-
-            RegisterCommands();
-        }
-
-        public override void OnDisable()
-        {
-
-        }
-
-        private void RegisterCommands()
-        {
-            Context.PluginManager.LoadCommands(new Clear(this));
+            Plugin = plugin;
         }
 
         public string GetMessage(string type, string tags)
         {
-            return Message.GetMessage(type, tags);
+            return "";
         }
     }
 }
